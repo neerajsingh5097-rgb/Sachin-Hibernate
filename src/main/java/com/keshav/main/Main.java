@@ -13,10 +13,15 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Employee e = new  Employee(2,"Mukul", "male", 22200);
+		Employee e = new  Employee( "Kunal", "male", 22200);
 		
 		
-		Configuration cfg = new Configuration().configure("hibernate.cfg.xml");
+//		Configuration cfg = new Configuration().configure("hibernate.cfg.xml");
+//		SessionFactory sessionFactory = cfg.buildSessionFactory();
+//		Session session = sessionFactory.openSession();
+//		Transaction tx = session.beginTransaction();
+		
+		Configuration cfg = new Configuration().configure();
 		SessionFactory sessionFactory = cfg.buildSessionFactory();
 		Session session = sessionFactory.openSession();
 		Transaction tx = session.beginTransaction();
