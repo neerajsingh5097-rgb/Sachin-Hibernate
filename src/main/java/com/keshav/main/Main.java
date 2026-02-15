@@ -9,7 +9,7 @@ import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 
-
+import com.keshav.configuration.HibernateConfig;
 import com.keshav.entity.Employee;
 
 public class Main {
@@ -21,10 +21,8 @@ public class Main {
 		
 		
 		
-		StandardServiceRegistry ssr = new StandardServiceRegistryBuilder().configure().build();
-		Metadata metadata = new MetadataSources(ssr).getMetadataBuilder().build();
 		
-		SessionFactory sf = metadata.buildSessionFactory();
+		SessionFactory sf = HibernateConfig.getSessionFactory();
 		Session session = sf.openSession();
 		Transaction tx = session.beginTransaction();
 		
