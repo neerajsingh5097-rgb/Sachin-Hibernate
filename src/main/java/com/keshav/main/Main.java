@@ -21,6 +21,8 @@ public class Main {
 		e.setSalary(444444);
 		e.setAddress(add1);
 //		add1.setEmployee(e);
+		
+		
 
 		SessionFactory sf = HibernateConfig.getSessionFactory();
 
